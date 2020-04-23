@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(learn-pointcloud)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-# add_compile_options(-std=c++11)
+add_compile_options(-std=c++11)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -15,7 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
   message_filters
   cv_bridge 
   image_transport
-  OpenCV
+  # OpenCV
 )
 
 find_package(PCL 1.7 REQUIRED)
@@ -238,3 +238,7 @@ target_link_libraries (sub_image ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 # hw1_syn
 add_executable(hw1_syn src/hw1_syn.cpp)
 target_link_libraries (hw1_syn ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+
+# sl_hw2
+add_executable(sl_hw2 src/sl_hw2.cpp)
+target_link_libraries (sl_hw2 ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
