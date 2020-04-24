@@ -225,7 +225,8 @@ include_directories(include ${PCL_INCLUDE_DIRS})
 
 # pcl
 add_executable(pcl src/pcl.cpp)
-target_link_libraries (pcl ${PCL_LIBRARIES})
+# target_link_libraries (pcl  ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+target_link_libraries (pcl  ${catkin_LIBRARIES})
 
 # pub_image
 add_executable(pub_image src/pub_image.cpp)
